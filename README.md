@@ -124,14 +124,14 @@ ere/
 <div align="center">
 
 ### 🌊 **Hero Section - Impacto Visual Inicial**
-<img src="assets/cap/Screenshot 2026-02-08 185906.png" alt="Hero Section" width="800">
+<img src="assets/cap/Screenshot 2026-02-08 185912.png" alt="Hero Section" width="800">
 
 *🎯 Primer impacto con frase memorable y llamada a la acción*
 
 ---
 
 ### 🛍️ **Sección de Productos - Grid Premium**
-<img src="assets/cap/Screenshot 2026-02-08 185912.png" alt="Sección Productos" width="800">
+<img src="assets/cap/Screenshot 2026-02-08 185906.png" alt="Sección Productos" width="800">
 
 *🏄‍♂️ Grid de 7 productos con imágenes locales y efectos hover*
 
