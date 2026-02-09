@@ -335,7 +335,7 @@ php -S localhost:8000
 
 ### 🌊 **Domina el Viento, Siente el Mar**
 
-**© 2024** - Todos los derechos reservados
+**© 2026** - Todos los derechos reservados
 
 ---
 
