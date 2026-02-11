@@ -1,0 +1,330 @@
+/* ===================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   =================================== */
+
+/* MOBILE FIRST - Base Styles (<768px) */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.product-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+/* Menú móvil vertical */
+.nav-menu {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Evitar scroll horizontal */
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.container {
+    padding: 0 15px;
+    max-width: 100%;
+}
+
+/* ===================================
+   TABLET ADAPTATION (768px - 1023px)
+   =================================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .products-grid {
+        gap: 25px;
+        padding: 15px;
+    }
+    
+    .product-card {
+        flex: 0 0 calc(50% - 12.5px);
+        max-width: calc(50% - 12.5px);
+    }
+    
+    /* Ajustar menú para tablet */
+    .nav-menu {
+        flex-direction: row;
+        gap: 25px;
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+        padding: 12px 18px;
+    }
+    
+    /* Aumentar tamaño de fuentes */
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .product-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .price {
+        font-size: 1.3rem;
+    }
+    
+    /* Ajustar imágenes */
+    .product-image {
+        height: 200px;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
+}
+
+/* ===================================
+   DESKTOP ADAPTATION (≥1024px)
+   =================================== */
+@media (min-width: 1024px) {
+    /* Implementar CSS Grid para desktop */
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        padding: 20px;
+    }
+    
+    .product-card {
+        width: 100%;
+        max-width: none;
+        flex: none;
+    }
+    
+    /* Restablecer flex properties */
+    .product-card {
+        display: block;
+    }
+    
+    /* Ajustes adicionales para desktop */
+    .nav-menu {
+        gap: 35px;
+    }
+    
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 15px 20px;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .product-info h3 {
+        font-size: 1.4rem;
+    }
+    
+    .price {
+        font-size: 1.8rem;
+    }
+    
+    .product-image {
+        height: 250px;
+    }
+    
+    .container {
+        padding: 0 25px;
+        max-width: 1250px;
+    }
+}
+
+/* ===================================
+   LARGE DESKTOP (≥1400px)
+   =================================== */
+@media (min-width: 1400px) {
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* ===================================
+   AJUSTES ADICIONALES RESPONSIVE
+   =================================== */
+
+/* Header responsive */
+@media (max-width: 767px) {
+    .header {
+        padding: 15px 0;
+    }
+    
+    .nav-container {
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .logo h2 {
+        font-size: 1.5rem;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(13, 40, 24, 0.98);
+        backdrop-filter: blur(25px);
+        padding: 20px;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Secciones responsive */
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .spots-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .comunidad-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .contacto-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .spots-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .comunidad-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contacto-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+/* ===================================
+   OPTIMIZACIONES DE RENDIMIENTO
+   =================================== */
+
+/* Optimizar carga de imágenes */
+.product-image img {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Evitar layout shift */
+.product-card {
+    contain: layout;
+}
+
+/* Smooth transitions */
+@media (prefers-reduced-motion: no-preference) {
+    .product-card,
+    .product-image img,
+    .nav-link {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+/* ===================================
+   ACCESIBILIDAD RESPONSIVE
+   =================================== */
+
+@media (max-width: 767px) {
+    .nav-toggle:focus {
+        outline: 2px solid var(--primary-accent);
+        outline-offset: 2px;
+    }
+    
+    .nav-link:focus {
+        outline: 2px solid var(--primary-accent);
+        outline-offset: 2px;
+    }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+@media print {
+    .nav-menu,
+    .nav-toggle,
+    .cta-button {
+        display: none;
+    }
+    
+    .products-grid {
+        display: block;
+    }
+    
+    .product-card {
+        break-inside: avoid;
+        margin-bottom: 20px;
+    }
+}
